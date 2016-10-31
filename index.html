@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,400,600,900|Annie+Use+Your+Telescope" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>South Park Promo</title>
+</head>
+
+<body>
+    <img src="ccw.png" class="cc-logo">
+    <div id="main-page">
+        <div class="main-title">
+            <div class="main-text">
+                <h1>South Park</h1>
+                <h2 class="xx">XX</h2>
+                <h3>Season 20</h3>
+                <h4>New Episode October 27</h4>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="cartman.png">
+        </div>
+        <a href="#second-page" id="scrolldown"><img src="mouse.png"></a>
+    </div>
+    <div id="second-page">
+        <h1>Halloween Special!</h1>
+        <table>
+            <tr>
+                <th colspan="2">Specs</th>
+            </tr>
+            <tr>
+                <td>Creators</td>
+                <td>Trey Parker, Matt Stone, Brian Graden</td>
+            </tr>
+            <tr>
+                <td>Production Teams</td>
+                <td>Comedy Central, Braniff, Comedy Partners, South Park Studios</td>
+            </tr>
+            <tr>
+                <td>Number of Episodes</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>U.S</td>
+            </tr>
+            <tr>
+                <td>Languages Available</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>Season Premire</td>
+                <td>September 14, 2016</td>
+            </tr>
+        </table>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hHtiwvi9gDU?controls=0&fs=0&modestbranding=0&showinfo=0&rel=0" frameborder="0" allowfullscreen controls=0 fs=0 modestbranding=1 showinfo=0></iframe>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.3.1/velocity.min.js"></script>
+<script type="text/javascript">
+function moveToElement(target, duration) {
+    var targetOffset = target.offset().top;
+    $("body").velocity("scroll", {
+        offset: targetOffset,
+        easing: "easeOutQuart",
+        duration: duration
+    });
+};
+
+$("#scrolldown").click(function() {
+    moveToElement($("#second-page"), 1000);
+});
+</script>
+
+</html>
